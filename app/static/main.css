@@ -1,0 +1,138 @@
+/* static/main.css */
+
+/* Global Reset & Dark Theme Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: #f8fafc;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #94a3b8;
+    margin: 32px 0 12px 0;
+}
+
+/* Add Item Section & Form */
+body > div:first-of-type {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+input[type="text"] {
+    flex: 1;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Buttons */
+.button {
+    background-color: #6366f1;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.button:hover {
+    background-color: #4f46e5;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Incomplete Items (Card Style) */
+li.mark {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f1f5f9;
+}
+
+/* "Mark As Complete" Link Button */
+li.mark a {
+    color: #38bdf8;
+    background-color: rgba(56, 189, 248, 0.1);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    transition: all 0.2s;
+}
+
+li.mark a:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+
+/* Completed Items */
+ul:last-of-type li {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #64748b;
+    text-decoration: line-through;
+}
+
